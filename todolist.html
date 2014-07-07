@@ -1,0 +1,176 @@
+<!DOCTYPE HTML> <!-- Latest compiled and minified CSS -->
+<head>
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="style.css">
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<meta charset="UTF-8">
+</head>
+  <body>
+    <div class="container">
+    <div class="col-md-6">
+    <section class="panel">
+    <header class="panel-heading">
+        やる事リスト
+    </header>
+    <div class="panel-body">
+        <ul class="to-do-list" id="sortable-todo">
+            <li class="clearfix">
+                <span class="drag-marker">
+                <i></i>
+                </span>
+                <div class="todo-check pull-left">
+                    <input type="checkbox" value="None" id="todo-check"/>
+                    <label for="todo-check"></label>
+                </div>
+                <p class="todo-title">
+                    2ヵ月前：ゲストリストを作成する
+                </p>
+                <div class="todo-actionlist pull-right clearfix">
+                    <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
+                    <a href="#" class="todo-remove"><i class="ico-close"></i></a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="drag-marker">
+                <i></i>
+                </span>
+                <div class="todo-check pull-left">
+                    <input type="checkbox" value="None" id="todo-check1"/>
+                    <label for="todo-check1"></label>
+                </div>
+                <p class="todo-title">
+                    2ヵ月前：ゲストと主席回答を確認する
+                </p>
+                <div class="todo-actionlist pull-right clearfix">
+                    
+                    <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
+                    <a href="#" class="todo-remove"><i class="ico-close"></i></a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="drag-marker">
+                <i></i>
+                </span>
+                <div class="todo-check pull-left">
+                    <input type="checkbox" value="None" id="todo-check2"/>
+                    <label for="todo-check2"></label>
+                </div>
+                <p class="todo-title">
+                    2ヵ月前：ドレスの試着
+                </p>
+                <div class="todo-actionlist pull-right clearfix">
+                    
+                    <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
+                    <a href="#" class="todo-remove"><i class="ico-close"></i></a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="todo-check pull-left">
+                </div>
+                <p class="todo-title">
+                    July 2014
+                </p>
+                <div class="todo-actionlist pull-right clearfix">
+                    
+                    <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
+                    <a href="#" class="todo-remove"><i class="ico-close"></i></a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="drag-marker">
+                <i></i>
+                </span>
+                <div class="todo-check pull-left">
+                    <input type="checkbox" value="None" id="todo-check4" />
+                    <label for="todo-check4"></label>
+                </div>
+                <p class="todo-title">
+                    3ヵ月前：親族の顔合わせ
+                </p>
+                <div class="todo-actionlist pull-right clearfix">
+                    
+                    <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
+                    <a href="#" class="todo-remove"><i class="ico-close"></i></a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="drag-marker">
+                <i></i>
+                </span>
+                <div class="todo-check pull-left">
+                    <input type="checkbox" value="None" id="todo-check5"/>
+                    <label for="todo-check5"></label>
+                </div>
+                <p class="todo-title">
+                    4ヵ月前：結婚指輪を探す
+                </p>
+                <div class="todo-actionlist pull-right clearfix">
+                    
+                    <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
+                    <a href="#" class="todo-remove"><i class="ico-close"></i></a>
+                </div>
+            </li>
+            <li class="clearfix">
+                <span class="drag-marker">
+                <i></i>
+                </span>
+                <div class="todo-check pull-left">
+                    <input type="checkbox" value="None" id="todo-check6" />
+                    <label for="todo-check6"></label>
+                </div>
+                <p class="todo-title">
+                    4ヵ月前：結婚指輪を探す結婚指輪のオーダー
+                </p>
+                <div class="todo-actionlist pull-right clearfix">
+                    <a href="#" class="todo-edit"><i class="ico-pencil"></i></a>
+                    <a href="#" class="todo-remove"><i class="ico-close"></i></a>
+                </div>
+            </li>
+        </ul>
+        <div class="todo-action-bar">
+            <div class="row">
+                <div class="col-xs-4 btn-todo-select">
+                    <!--<button type="submit" class="btn btn-default"><i class="fa fa-check"></i> 全て選択</button>-->
+                </div>
+                <div class="col-xs-4 todo-search-wrap">
+                    <input type="text" class="form-control search todo-search pull-right" placeholder=" 検索">
+                </div>
+                <div class="col-xs-4 btn-add-task">
+                	<a href="#addTask" data-toggle="modal"><button id="addtask_new" class="btn btn-primary">
+                                    追加 <i class="fa fa-plus"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="addTask" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                       <h4 class="modal-title">タスクを追加する</h4>
+                    </div>
+
+                    <div class="modal-body row">
+						<form method="post" action="guestlist_process">
+				                <label>タスク:</label>
+				                <input class="input-medium" placeholder="ドレスを探す" type="text" name="firstname"> 
+				                <div class="form-actions">
+				                  <button type="submit" class="btn btn-success">追加</button>
+				                  <input class="btn" value="キャンセル" type="reset"> 
+				                </div>
+				         </form>
+                     </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- modal -->
+</section>
+                  </div>
+              </div>
+</body>
+                  </html>
